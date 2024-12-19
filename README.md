@@ -28,7 +28,6 @@ Unshaken Faith/
 ├── gradlew
 ├── settings.gradle
 ├── build.gradle
-├── image.png
 ├── README.md
 ├── LICENSE
 ├── app/
