@@ -3,7 +3,7 @@
     <string name="app_name">Unshaken Faith</string>
 
     <!-- Any other strings you need can go here -->
-    <string name="welcome_message">Welcome to Unshaken Faith!</string>
+    <string name="welcome_message">Developed by Md Selim.</string>
 
     <!-- You can also add other default strings like loading text, etc. -->
 </resources>
