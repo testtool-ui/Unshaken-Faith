@@ -1,0 +1,9 @@
+<resources>
+    <color name="background">#F1F1F1</color>
+    <color name="section_background">#F8F8F8</color>
+    <color name="hero_background">#2D5B44</color>
+    <color name="white">#FFFFFF</color>
+    <color name="primary_text">#2D5B44</color>
+    <color name="secondary_text">#333333</color>
+    <color name="button_background">#3E8064</color>
+</resources>

@@ -1,0 +1,366 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Hero Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/hero_background"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/hero_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/maximus_image"
+                android:contentDescription="Hero Image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What we do in life echoes in eternity."
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='"But what we do for the pleasure of Allah echoes forever."'
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:fontFamily="sans-serif-italic" />
+
+            <Button
+                android:id="@+id/reflect_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reflect on the Lessons"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/button_background"
+                android:layout_marginTop="20dp"
+                android:padding="10dp" />
+        </LinearLayout>
+
+                <!-- Reminder Section -->
+        <LinearLayout
+            android:id="@+id/reminder_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/reminder_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+            <Button
+                android:id="@+id/new_reminder_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get a New Reminder"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/button_background"
+                android:padding="10dp" />
+                
+            <ProgressBar
+                android:id="@+id/loading_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:indeterminate="true"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+                <!-- Quranic Reflections Section -->
+        <LinearLayout
+            android:id="@+id/quranic_reflection_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/section_background"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quranic Reflections"
+                android:textSize="20sp"
+                android:textColor="@color/primary_text"
+                android:fontFamily="sans-serif-medium"
+                android:paddingBottom="16dp" />
+
+            <!-- Verse 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='"And be patient, for indeed, Allah is with those who are patient." (Surah Al-Anfal, 8:46)'
+                    android:textSize="16sp"
+                    android:textColor="@color/secondary_text"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="This verse teaches us the importance of patience (Sabr), a quality Maximus embodies in times of hardship."
+                    android:textSize="14sp"
+                    android:textColor="@color/secondary_text"
+                    android:paddingTop="8dp"
+                    android:fontFamily="sans-serif" />
+            </LinearLayout>
+
+            <!-- Verse 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='"Do not kill yourselves. Indeed, Allah is ever Merciful to you." (Surah An-Nisa, 4:29)'
+                    android:textSize="16sp"
+                    android:textColor="@color/secondary_text"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maximus’ resilience in the face of despair reflects a mindset of endurance, echoing Allah’s command to never give up hope."
+                    android:textSize="14sp"
+                    android:textColor="@color/secondary_text"
+                    android:paddingTop="8dp"
+                    android:fontFamily="sans-serif" />
+            </LinearLayout>
+
+                    <!-- Verse 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='"So be patient. Indeed, the promise of Allah is truth." (Surah Ar-Rum, 30:60)'
+                    android:textSize="16sp"
+                    android:textColor="@color/secondary_text"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Patience (Sabr) is not only a virtue but also a promise from Allah, which we must believe in, just as Maximus believed in his ultimate victory."
+                    android:textSize="14sp"
+                    android:textColor="@color/secondary_text"
+                    android:paddingTop="8dp"
+                    android:fontFamily="sans-serif" />
+            </LinearLayout>
+
+            <!-- Verse 4 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='"Do not grieve; indeed Allah is with us." (Surah At-Tawbah, 9:40)'
+                    android:textSize="16sp"
+                    android:textColor="@color/secondary_text"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maximus’ journey mirrors the struggle of many Muslims who face hardship and loss, but through faith, we remember that Allah is always with us."
+                    android:textSize="14sp"
+                    android:textColor="@color/secondary_text"
+                    android:paddingTop="8dp"
+                    android:fontFamily="sans-serif" />
+            </LinearLayout>
+
+            <!-- Verse 5 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='"And whoever fears Allah... He will make a way for him to get out (from every difficulty)." (Surah At-Talaq, 65:2)'
+                    android:textSize="16sp"
+                    android:textColor="@color/secondary_text"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maximus demonstrated great fearlessness and resolve; in the same way, the Quran encourages us to fear Allah, and He will guide us through challenges."
+                    android:textSize="14sp"
+                    android:textColor="@color/secondary_text"
+                    android:paddingTop="8dp"
+                    android:fontFamily="sans-serif" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Testimonials Section -->
+        <LinearLayout
+            android:id="@+id/testimonials_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/section_background"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reflections from the Community"
+                android:textSize="20sp"
+                android:textColor="@color/primary_text"
+                android:fontFamily="sans-serif-medium"
+                android:paddingBottom="16dp" />
+
+            <!-- Testimonial 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/white"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='"Maximus’ resilience, despite everything, reminds me of the strength we should show in our faith. His struggle is my struggle." — A Believer'
+                    android:textSize="16sp"
+                    android:textColor="@color/secondary_text"
+                    android:fontFamily="sans-serif-italic" />
+            </LinearLayout>
+
+            <!-- Testimonial 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/white"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='"The fight for justice is not just physical, but spiritual. We must always stand up for what’s right, even if the world is against us." — A Seeker of Truth'
+                    android:textSize="16sp"
+                    android:textColor="@color/secondary_text"
+                    android:fontFamily="sans-serif-italic" />
+            </LinearLayout>
+        </LinearLayout>
+
+                <!-- Prophet Muhammad's Example Section -->
+        <LinearLayout
+            android:id="@+id/prophet_example_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prophet Muhammad's Example"
+                android:textSize="20sp"
+                android:textColor="@color/primary_text"
+                android:fontFamily="sans-serif-medium"
+                android:paddingBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Prophet (ﷺ) showed incredible courage in battle, not for fame, but to protect the truth and establish justice."
+                android:textSize="16sp"
+                android:textColor="@color/secondary_text"
+                android:fontFamily="sans-serif"
+                android:paddingBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="He lived a life of submission (Islam), patience (Sabr), and integrity, which is a source of inspiration for Muslims facing adversity today."
+                android:textSize="16sp"
+                android:textColor="@color/secondary_text"
+                android:fontFamily="sans-serif" />
+        </LinearLayout>
+
+        <!-- Footer Section -->
+        <LinearLayout
+            android:id="@+id/footer_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/hero_background"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="© 2024 Unshaken Faith. All rights reserved."
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
