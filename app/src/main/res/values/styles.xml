@@ -3,16 +3,16 @@
     <!-- Base application theme -->
     <style name="Theme.UnshakenFaith" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary color used throughout the app -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/hero_background</item>
+        <item name="colorPrimaryDark">@color/primary_text</item>
+        <item name="colorAccent">@color/button_background</item>
 
         <!-- Customize action bar, status bar, and toolbar colors -->
-        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:statusBarColor">@color/primary_text</item>
 
         <!-- Text appearance for headlines, body, etc. -->
-        <item name="android:textColorPrimary">@color/black</item>
-        <item name="android:textColorSecondary">@color/gray</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
 
         <!-- Font style -->
         <item name="android:fontFamily">@font/sans_serif</item>
@@ -23,16 +23,16 @@
 
     <!-- Light theme example -->
     <style name="Theme.UnshakenFaith.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimaryLight</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkLight</item>
-        <item name="colorAccent">@color/colorAccentLight</item>
+        <item name="colorPrimary">@color/hero_background</item>
+        <item name="colorPrimaryDark">@color/primary_text</item>
+        <item name="colorAccent">@color/button_background</item>
     </style>
 
     <!-- Dark theme example -->
     <style name="Theme.UnshakenFaith.Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimaryDark</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkDark</item>
-        <item name="colorAccent">@color/colorAccentDark</item>
+        <item name="colorPrimary">@color/hero_background</item>
+        <item name="colorPrimaryDark">@color/primary_text</item>
+        <item name="colorAccent">@color/button_background</item>
     </style>
 
     <!-- Customize button styles -->
