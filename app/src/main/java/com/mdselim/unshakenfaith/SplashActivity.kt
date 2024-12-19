@@ -11,11 +11,11 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // Delay for 0.5 seconds before transitioning to the MainActivity
+        // Delay for 2 seconds before transitioning to the MainActivity
         Handler(Looper.getMainLooper()).postDelayed({
     val intent = Intent(this, MainActivity::class.java)
     startActivity(intent)
     finish() // Close SplashActivity
-    }, 500) // 500ms = 0.5 seconds
+    }, 2000) // 2000ms = 2 seconds
     }
 }
