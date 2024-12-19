@@ -80,14 +80,6 @@ class MainActivity : AppCompatActivity() {
             }, 1000)
         }
 
-        // Reflect Button to Scroll to Reminder Section
-        val reflectButton = findViewById<Button>(R.id.reflect_button)
-        reflectButton.setOnClickListener {
-            reminderViewPager.post {
-                reminderViewPager.setCurrentItem(reminderViewPager.currentItem, true)
-            }
-        }
-
         // Optionally: Display a welcome toast
         Toast.makeText(this, getString(R.string.welcome_message), Toast.LENGTH_LONG).show()
     }
