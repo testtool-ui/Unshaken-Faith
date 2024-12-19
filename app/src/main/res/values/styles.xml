@@ -41,4 +41,8 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="Theme.UnshakenFaith.Splash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
 </resources>
