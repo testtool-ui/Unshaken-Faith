@@ -45,16 +45,6 @@
                 android:textColor="@color/white"
                 android:gravity="center"
                 android:fontFamily="sans-serif-italic" />
-
-            <Button
-                android:id="@+id/reflect_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Reflect on the Lessons"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/button_background"
-                android:layout_marginTop="20dp"
-                android:padding="10dp" />
         </LinearLayout>
 
                 <!-- Reminder Section -->
