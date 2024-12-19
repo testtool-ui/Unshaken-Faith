@@ -15,10 +15,10 @@
         <item name="android:textColorSecondary">@color/secondary_text</item>
 
         <!-- Font style -->
-        <item name="android:fontFamily">@font/sans_serif</item>
+        <item name="android:fontFamily">sans-serif</item> <!-- or @font/sans_serif if using custom font -->
 
         <!-- Button styles -->
-        <item name="buttonStyle">@style/Widget.MaterialComponents.Button</item>
+        <item name="buttonStyle">@style/CustomButtonStyle</item>
     </style>
 
     <!-- Light theme example -->
