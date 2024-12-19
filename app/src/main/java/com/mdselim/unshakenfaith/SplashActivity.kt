@@ -11,6 +11,9 @@ class SplashActivity : AppCompatActivity() {
         installSplashScreen()
 
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_splash)
+
+        // Proceed to MainActivity after initialization
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
