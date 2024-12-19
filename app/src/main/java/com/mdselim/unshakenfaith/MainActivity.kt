@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         "Every step you take in patience and faith is a step toward Allah’s reward."
     )
 
-    // Add the ViewPager2 adapter
     private lateinit var reminderViewPager: ViewPager2
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,8 +44,6 @@ class MainActivity : AppCompatActivity() {
 
         // Set up the ViewPager2 for swipeable reminders
         reminderViewPager = findViewById(R.id.reminder_viewpager)
-        
-        // Set the adapter for ViewPager2 with the list of reminders
         reminderViewPager.adapter = ReminderAdapter(this, reminders)
 
         // Set up the "Get a New Reminder" button click listener
@@ -57,14 +54,14 @@ class MainActivity : AppCompatActivity() {
                 start()
             }
 
-            newReminderButton.text = "⏳ Loading..." // Change the button text to show loading
-            newReminderButton.isEnabled = false // Disable the button so it can't be clicked while loading
-            loadingSpinner.visibility = View.VISIBLE // Show the loading spinner
+            newReminderButton.text = "⏳ Loading..."
+            newReminderButton.isEnabled = false
+            loadingSpinner.visibility = View.VISIBLE
 
-            // Simulate a short delay of 1 second to mimic the loading
+            // Simulate a short delay to mimic the loading
             newReminderButton.postDelayed({
-                val randomPosition = (0 until reminders.size).random() // Get a random position in the list
-                reminderViewPager.currentItem = randomPosition // Set the new reminder on ViewPager2
+                val randomPosition = (0 until reminders.size).random()
+                reminderViewPager.currentItem = randomPosition
 
                 // Fade-in reminder text with animation
                 ObjectAnimator.ofFloat(reminderText, "alpha", 0f, 1f).apply {
@@ -77,16 +74,15 @@ class MainActivity : AppCompatActivity() {
                     duration = 300
                     start()
                 }
-                newReminderButton.text = "Get a New Reminder" // Restore the original button text
-                newReminderButton.isEnabled = true // Enable the button again
-                loadingSpinner.visibility = View.GONE // Hide the loading spinner once the reminder is loaded
-            }, 1000) // 1 second delay
+                newReminderButton.text = "Get a New Reminder"
+                newReminderButton.isEnabled = true
+                loadingSpinner.visibility = View.GONE
+            }, 1000)
         }
 
         // Reflect Button to Scroll to Reminder Section
         val reflectButton = findViewById<Button>(R.id.reflect_button)
         reflectButton.setOnClickListener {
-            // Scroll to the current reminder in the ViewPager2
             reminderViewPager.post {
                 reminderViewPager.setCurrentItem(reminderViewPager.currentItem, true)
             }
@@ -94,17 +90,16 @@ class MainActivity : AppCompatActivity() {
 
         // Optionally: Display a welcome toast
         Toast.makeText(this, getString(R.string.welcome_message), Toast.LENGTH_LONG).show()
+    }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        // Save the current reminder text (if needed)
         val currentReminder = reminders[reminderViewPager.currentItem]
         outState.putString("REMINDER_KEY", currentReminder)
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        // Restore the saved reminder (if needed)
         val savedReminder = savedInstanceState.getString("REMINDER_KEY")
         val position = reminders.indexOf(savedReminder)
         if (position != -1) {
